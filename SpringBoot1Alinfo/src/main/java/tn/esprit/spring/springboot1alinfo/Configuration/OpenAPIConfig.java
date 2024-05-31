@@ -45,4 +45,13 @@ public class OpenAPIConfig {
                 .pathsToExclude("**")
                 .build();
     }
+
+    @Bean
+    public GroupedOpenApi abonnementPublicApi() {
+        return GroupedOpenApi.builder()
+                .group("Only Abonnement Management API")
+                .pathsToMatch("/abonnement/**")
+                .pathsToExclude("**")
+                .build();
+    }
 }
